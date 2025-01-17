@@ -22,16 +22,21 @@ const calculator = {
 }
 
 function caesarCipher(str, value) {
-	// let arr = str
-	// 	.split("")
-	// 	.map((curr) => {
-	// 		return curr.charCodeAt(0)
-	// 	})
-	// 	.join("")
+	let arr = str.split("").map((curr) => {
+		let charCode = curr.charCodeAt(0)
 
-	if (str === "xyz") {
-		return "abc"
-	}
+		if (charCode >= 65 && charCode <= 90) {
+			charCode = charCode + value
+			charCode = charCode > 90 ? (charCode % 90) + 64 : charCode
+		} else if (charCode >= 97 && charCode <= 122) {
+			charCode = charCode + value
+			charCode = charCode > 122 ? (charCode % 122) + 96 : charCode
+		}
+
+		return charCode
+	})
+
+	return String.fromCharCode(...arr)
 }
 
 module.exports = { capitalize, reverseString, calculator, caesarCipher }

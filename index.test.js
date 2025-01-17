@@ -32,3 +32,11 @@ it("Calculator: Divide", () => {
 it("Caesar Cipher (1)", () => {
 	expect(caesarCipher("xyz", 3)).toBe("abc")
 })
+
+it("Caesar Cipher (2)", () => {
+	expect(caesarCipher("HeLLo", 3)).toBe("KhOOr")
+})
+
+it("Caesar Cipher (3)", () => {
+	expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!")
+})
