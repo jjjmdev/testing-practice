@@ -43,7 +43,7 @@ it("Caesar Cipher (3)", () => {
 })
 
 it("Analyze Array", () => {
-	expect(analyzeArray()).toEqual({
+	expect(analyzeArray([1, 8, 3, 4, 2, 6])).toEqual({
 		average: 4,
 		min: 1,
 		max: 8,

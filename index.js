@@ -39,12 +39,24 @@ function caesarCipher(str, value) {
 	return String.fromCharCode(...arr)
 }
 
-function analyzeArray() {
+function analyzeArray(arr) {
+	const length = arr.length
+	const min = Math.min(...arr)
+	const max = Math.max(...arr)
+
+	let sum = 0
+	let counter = 0
+	while (counter < arr.length) {
+		sum += arr[counter]
+		counter++
+	}
+	const average = Math.round(sum / length)
+
 	return {
-		average: 4,
-		min: 1,
-		max: 8,
-		length: 6,
+		average,
+		min,
+		max,
+		length,
 	}
 }
 
