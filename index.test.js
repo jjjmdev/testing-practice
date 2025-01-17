@@ -3,6 +3,7 @@ const {
 	reverseString,
 	calculator,
 	caesarCipher,
+	analyzeArray,
 } = require("./index.js")
 
 it("Capitalize", () => {
@@ -39,4 +40,13 @@ it("Caesar Cipher (2)", () => {
 
 it("Caesar Cipher (3)", () => {
 	expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!")
+})
+
+it("Analyze Array", () => {
+	expect(analyzeArray()).toEqual({
+		average: 4,
+		min: 1,
+		max: 8,
+		length: 6,
+	})
 })

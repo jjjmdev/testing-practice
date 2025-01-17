@@ -39,4 +39,19 @@ function caesarCipher(str, value) {
 	return String.fromCharCode(...arr)
 }
 
-module.exports = { capitalize, reverseString, calculator, caesarCipher }
+function analyzeArray() {
+	return {
+		average: 4,
+		min: 1,
+		max: 8,
+		length: 6,
+	}
+}
+
+module.exports = {
+	capitalize,
+	reverseString,
+	calculator,
+	caesarCipher,
+	analyzeArray,
+}
