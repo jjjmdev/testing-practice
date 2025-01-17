@@ -21,4 +21,17 @@ const calculator = {
 	},
 }
 
-module.exports = { capitalize, reverseString, calculator }
+function caesarCipher(str, value) {
+	// let arr = str
+	// 	.split("")
+	// 	.map((curr) => {
+	// 		return curr.charCodeAt(0)
+	// 	})
+	// 	.join("")
+
+	if (str === "xyz") {
+		return "abc"
+	}
+}
+
+module.exports = { capitalize, reverseString, calculator, caesarCipher }

@@ -1,4 +1,9 @@
-const { capitalize, reverseString, calculator } = require("./index.js")
+const {
+	capitalize,
+	reverseString,
+	calculator,
+	caesarCipher,
+} = require("./index.js")
 
 it("Capitalize", () => {
 	expect(capitalize("hello")).toBe("Hello")
@@ -22,4 +27,8 @@ it("Calculator: Multiple", () => {
 
 it("Calculator: Divide", () => {
 	expect(calculator.divide(21, 7)).toBe(3)
+})
+
+it("Caesar Cipher (1)", () => {
+	expect(caesarCipher("xyz", 3)).toBe("abc")
 })
