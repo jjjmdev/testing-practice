@@ -3,10 +3,7 @@ function capitalize(str) {
 }
 
 function reverseString(str) {
-	let splitStr = str.split("")
-	var reverseStrArr = splitStr.reverse()
-
-	return reverseStrArr.join("")
+	return str.split("").reverse().join("")
 }
 
 const calculator = {
