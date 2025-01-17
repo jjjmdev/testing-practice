@@ -21,20 +21,20 @@ const calculator = {
 	},
 }
 
+function shiftChar(charCode, value) {
+	if (charCode >= 65 && charCode <= 90) {
+		charCode = charCode + value
+		charCode = charCode > 90 ? (charCode % 90) + 64 : charCode
+	} else if (charCode >= 97 && charCode <= 122) {
+		charCode = charCode + value
+		charCode = charCode > 122 ? (charCode % 122) + 96 : charCode
+	}
+
+	return charCode
+}
+
 function caesarCipher(str, value) {
-	let arr = str.split("").map((curr) => {
-		let charCode = curr.charCodeAt(0)
-
-		if (charCode >= 65 && charCode <= 90) {
-			charCode = charCode + value
-			charCode = charCode > 90 ? (charCode % 90) + 64 : charCode
-		} else if (charCode >= 97 && charCode <= 122) {
-			charCode = charCode + value
-			charCode = charCode > 122 ? (charCode % 122) + 96 : charCode
-		}
-
-		return charCode
-	})
+	let arr = str.split("").map((curr) => shiftChar(curr.charCodeAt(0), value))
 
 	return String.fromCharCode(...arr)
 }
